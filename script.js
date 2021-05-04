@@ -643,3 +643,123 @@ comparacion_booleana = undefined && 'hola' && 3 && ''; //undefined
 a = null ?? undefined ?? undefined ?? null ?? "hola" ?? null ?? 'carlos'; //"hola"
 a =   undefined ?? undefined ?? undefined ??  null ?? null ?? null; //null
 
+//BUCLES WHILE Y FOR
+
+/*while ( condition){
+    do something...
+}*/
+
+//Incremento
+console.log("**********while incremento*********");
+let i = 0;
+while (i <= 10) {
+  console.log(`El valor de i es: ${i}`);
+  i++;
+}
+
+console.log("**********while decremento*********");
+//Decremento
+i = 10;
+while (i) {
+  console.log(`El valor de i es: ${i}`);
+  i--;
+}
+
+// do - while
+
+/*
+
+do{
+do something...
+}while(condition)
+*/
+
+console.log("*********do while incremento**********");
+i = 1;
+do {
+  console.log(`El valor de i es: ${i}`);
+  i++;
+} while (i <= 10);
+
+//Ciclo for
+
+/*
+for(comienzo;condicion;incremento){
+    do something...
+}*/
+console.log("*********for incremento**********");
+
+for (i = 1; i <= 10; i++) {
+  console.log(`El valor de i es: ${i}`);
+}
+
+console.log("*********for decremento**********");
+
+for (i = 10; i >= 0; i--) {
+  console.log(`El valor de i es: ${i}`);
+}
+
+console.log("*********Alcance de variable**********");
+//Alcance de la variable
+
+for (let j = 0; j <= 10; j++) {
+  console.log(`El valor de j es: ${j}`);
+}
+/*onsole.log(`El valor de j por fuera es es: ${j}`);*/
+
+console.log("*********Alcance de variable 2**********");
+//Alcance de la variable
+
+let z = 0;
+for (z; z <= 10; z++) {
+  console.log(`El valor de z es: ${z}`);
+}
+console.log(`El valor de z por fuera es es: ${z}`);
+
+console.log("**********saltado por partes*********");
+//Saltado por partes
+let w = 0;
+for (; w <= 10; ) {
+  console.log(`El valor de w es: ${w++}`);
+}
+
+//Break y continue
+console.log("*********break**********");
+
+w = 0;
+while (1) {
+  console.log(`El valor de w es: ${w++}`);
+  if (w == 11) break;
+}
+
+//Continue
+for (i = 1; i <= 10; i++) {
+  if (i % 2 != 0) continue;
+  console.log(`${i} es un número par`);
+}
+
+//Etiqueta para break y continue
+console.log("************Etiquetas************");
+let j;
+for (i = 0; i <= 10; i++) {
+  for (j = 0; j <= 10; j++) {
+    console.log(`La suma de i+j es ${i+j}`)
+    if(j==2)break;
+  }
+  if(j==2)break;
+}
+console.log('Salio');
+
+//forma con etiqueta, las etiquetas son para los bucles
+console.log("************Etiquetas************");
+
+principal: for (i = 0; i <= 10; i++) {
+  for (j = 0; j <= 10; j++) {
+    console.log(`La suma de i+j es ${i+j}`)
+    if(j==2)break principal;
+  }
+}
+console.log('Salio');
+
+//Hacer commit "Bucles while, for, break, continue y etiquetas"
+
